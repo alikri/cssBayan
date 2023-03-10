@@ -15,40 +15,63 @@ body {
 		align-items: center;
 		width: 80%;
 		height: 80%;
+		
 	}
 
 	.header {
 		width: 100%;
 	}
 
-	.ball-memes-container {
+	.all-memes-container {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		height: 100%;
 	}
 
-	.img-label {
+	.meme-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 	}
 
+	.meme-label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		cursor: pointer;
+	}
 
-	.img-label input {
+	input {
+		-webkit-appearance: none;
+		appearance: none;
+	}
+
+	.img-wrapper {
 		display: none;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	.meme-input:checked + .img-wrapper {
+		display: flex;
 	}
 
 	.img-meme {
-		width: 70%;
-		height: 70%;
+		width: 80%;
+		height: 80%;
 	}
 
-	.header-container {
+	.meme-title {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	.header-container img {
+	.meme-title img {
 		width: 20px;
 		height: 20px;
 	}
@@ -59,4 +82,6 @@ body {
 		margin-top: 5px;
 		
 	}
+
+
 }
