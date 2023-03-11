@@ -169,27 +169,13 @@ body {
 	.meme-label:hover .close-icon {
 		transform: rotate(0deg);
 	}
-
-	.close-icon {
-		display: block;
-		width: 2rem;
-		height: 2rem;
-		background-size: 2em 2em;
-
-		opacity: 0;
-	}
-
+	
 	.all-memes-container:hover .close-icon {
 		opacity: 1;
 	}
 
-	.meme-label .meme-title {
-		font-size: 1.9em;
-		transition: all .2s linear;
-	}
-
 	.all-memes-container:hover .meme-label .meme-title {
-		color: bl
+		color: black;
 	}
 }
 
