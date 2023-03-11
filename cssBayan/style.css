@@ -21,7 +21,7 @@ body {
 
 	.header {
 		width: 100%;
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		margin-bottom: .5em;
 	}
 
@@ -35,7 +35,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-
 	}
 
 	.meme-container {
@@ -45,13 +44,27 @@ body {
 	}
 
 	.meme-label {
+		opacity: 1;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
 		width: 100%;
-		height: 3rem;
+		height: 100%;
 		cursor: pointer;
 	}
+
+	.meme-label:active {
+		opacity: 0.5;
+	}
+
+	.header-wrapper {
+		height: 5em;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 
 	.meme-label h2 {
 		font-size: 1em;
@@ -60,12 +73,12 @@ body {
 
 	.close-icon-container {
 		display: block;
-		width: 1.3rem;
-		height: 1.3rem;
+		width: 1.3em;
+		height: 1.3em;
 		background-image: url("./assets/icons8-multiply-30.png");
 		background-size: 1.3em 1.3em;
 		transform: rotate(45deg);
-		transition: transform 0.3s ease;
+		transition: all 0.5s linear;
 	}
 
 	.meme-input {
@@ -74,16 +87,25 @@ body {
 	}
 
 	.img-wrapper {
-		display: none;
+		display: flex;
 		justify-content: center;
-		width: 80%;
-		height: 100%;
+		width: 0;
+		height: 0;
 		padding-bottom: .3em;
+		transition: all 0.5s linear;
 	}
 
-	.meme-input:checked ~ .img-wrapper {
+	.img-meme {
+		opacity: 0;
+		transition: all 0.5s linear;
+	}
+
+	.meme-input:checked ~  .meme-label .img-wrapper {
+		width: 40%;
+		height: 100%;
+	}
+	.meme-input:checked ~  .meme-label .img-wrapper img {
 		opacity: 1;
-		display: flex;
 	}
 
 	
@@ -105,7 +127,6 @@ body {
 
 @media (min-width: 820px) and (min-height: 1180px) {
 	
-
 	.header h1 {
 		font-size: 2em;
 	}
@@ -113,15 +134,14 @@ body {
 	.meme-label h2 {
 		font-size: 1.3em;
 	}
-
 	.close-icon-container {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 1.5em;
+		height: 1.5em;
 		background-size: 1.5em 1.5em;
 	}
 
 	.img-wrapper {
-		width: 50%;
+		width: 40%;
 	}
 }
 
@@ -134,21 +154,33 @@ body {
 		padding-bottom: 5em;
 	}
 
+	.meme-container:hover .img-wrapper {
+		width: 40%;
+		height: 100%;
+	}
+
+	.meme-container:hover .img-wrapper img {
+		opacity: 1;
+	}
+
 	.close-icon-container {
-		display: none;
+		display: block;
 		width: 2rem;
 		height: 2rem;
 		background-size: 2em 2em;
+
+		opacity: 0;
 	}
 
 	.all-memes-container:hover .close-icon-container {
-		display: block;
+		opacity: 1;
 	}
 
 	.header h1 {
 		margin-top: 2em;
 		font-size: 3em;
 	}
+
 
 	.meme-label h2 {
 		font-size: 1.9em;
