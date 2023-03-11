@@ -65,9 +65,8 @@ body {
 		align-items: center;
 	}
 
-
 	.meme-label .meme-title {
-		color:blueviolet;
+		color: blueviolet;
 		font-size: 1em;
 		font-weight: 600;
 
@@ -103,21 +102,20 @@ body {
 		transition: all 0.5s linear;
 	}
 
-	.meme-input:checked ~  .meme-label .img-wrapper {
+	.meme-input:checked~.meme-label .img-wrapper {
 		width: 40%;
 		height: 100%;
 	}
 
-	.meme-input:checked ~  .meme-label .meme-title {
+	.meme-input:checked~.meme-label .meme-title {
 		color: black;
 	}
 
-	.meme-input:checked ~  .meme-label .img-wrapper img {
+	.meme-input:checked~.meme-label .img-wrapper img {
 		opacity: 1;
 	}
 
-	
-	.meme-input:checked ~ .meme-label .close-icon {
+	.meme-input:checked~.meme-label .close-icon {
 		transform: rotate(0deg);
 	}
 
@@ -128,13 +126,12 @@ body {
 
 	hr {
 		height: .05rem;
-		background-color: rgba(128, 128, 128, 0.378);	
+		background-color: rgba(128, 128, 128, 0.378);
 	}
 }
 
-
 @media (min-width: 820px) and (min-height: 1180px) {
-	
+
 	.header h1 {
 		font-size: 2em;
 	}
@@ -146,6 +143,7 @@ body {
 	.meme-label .meme-title {
 		font-size: 1.4em;
 	}
+
 	.close-icon-container {
 		width: 1.5em;
 		height: 1.5em;
@@ -157,7 +155,7 @@ body {
 	}
 }
 
-@media screen and (hover: hover){
+@media screen and (hover: hover) {
 
 	.meme-label:hover .img-wrapper {
 		width: 40%;
@@ -191,10 +189,8 @@ body {
 	}
 
 	.all-memes-container:hover .meme-label .meme-title {
-		color: black;
+		color: bl
 	}
-
-	
 }
 
 @media (min-width: 1920px) and (min-height: 1080px) {
@@ -205,6 +201,7 @@ body {
 		height: fit-content;
 		padding-bottom: 5em;
 	}
+
 	.header-wrapper {
 		height: 5em;
 	}
@@ -219,6 +216,7 @@ body {
 	.header h1 {
 		margin-top: 2em;
 		font-size: 3em;
+
 	}
 
 	.img-meme {
