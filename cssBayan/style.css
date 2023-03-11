@@ -58,7 +58,7 @@ body {
 	}
 
 	.header-wrapper {
-		height: 5em;
+		height: 3em;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -67,18 +67,21 @@ body {
 
 
 	.meme-label h2 {
+		color:blueviolet;
 		font-size: 1em;
 		font-weight: 600;
+
+		transition: all .2s linear;
 	}
 
-	.close-icon-container {
+	.close-icon {
 		display: block;
 		width: 1.3em;
 		height: 1.3em;
 		background-image: url("./assets/icons8-multiply-30.png");
 		background-size: 1.3em 1.3em;
 		transform: rotate(45deg);
-		transition: all 0.5s linear;
+		transition: all 0.2s linear;
 	}
 
 	.meme-input {
@@ -104,12 +107,17 @@ body {
 		width: 40%;
 		height: 100%;
 	}
+
+	.meme-input:checked ~  .meme-label h2 {
+		color: black;
+	}
+
 	.meme-input:checked ~  .meme-label .img-wrapper img {
 		opacity: 1;
 	}
 
 	
-	.meme-input:checked ~ .meme-label .close-icon-container {
+	.meme-input:checked ~ .meme-label .close-icon {
 		transform: rotate(0deg);
 	}
 
@@ -131,8 +139,12 @@ body {
 		font-size: 2em;
 	}
 
+	.header-wrapper {
+		height: 4em;
+	}
+
 	.meme-label h2 {
-		font-size: 1.3em;
+		font-size: 1.4em;
 	}
 	.close-icon-container {
 		width: 1.5em;
@@ -153,17 +165,23 @@ body {
 		height: fit-content;
 		padding-bottom: 5em;
 	}
-
-	.meme-container:hover .img-wrapper {
+	.header-wrapper {
+		height: 5em;
+	}
+	.meme-label:hover .img-wrapper {
 		width: 40%;
 		height: 100%;
 	}
 
-	.meme-container:hover .img-wrapper img {
+	.meme-label:hover .img-wrapper img {
 		opacity: 1;
 	}
 
-	.close-icon-container {
+	.meme-label:hover .close-icon {
+		transform: rotate(0deg);
+	}
+
+	.close-icon {
 		display: block;
 		width: 2rem;
 		height: 2rem;
@@ -172,8 +190,17 @@ body {
 		opacity: 0;
 	}
 
-	.all-memes-container:hover .close-icon-container {
+	.all-memes-container:hover .close-icon {
 		opacity: 1;
+	}
+
+	.meme-label h2 {
+		font-size: 1.9em;
+		transition: all .2s linear;
+	}
+
+	.all-memes-container:hover .meme-label h2 {
+		color: black;
 	}
 
 	.header h1 {
@@ -181,10 +208,6 @@ body {
 		font-size: 3em;
 	}
 
-
-	.meme-label h2 {
-		font-size: 1.9em;
-	}
 
 
 	.img-meme {
