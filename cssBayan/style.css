@@ -169,6 +169,10 @@ body {
 	.meme-label:hover .close-icon {
 		transform: rotate(0deg);
 	}
+
+	.all-memes-container .close-icon {
+		opacity: 0;
+	}
 	
 	.all-memes-container:hover .close-icon {
 		opacity: 1;
